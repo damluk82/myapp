@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+/*@import 'assets/styles/material-styles.css';*/
+
+/* @import '~@swimlane/ngx-datatable/release/assets/app.css'; */
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';
+@import '~@swimlane/ngx-datatable/release/themes/material.css';
+/* @import '~@swimlane/ngx-datatable/release/themes/icons.css'; */
+
+#my{
+zoom: 80%;
+}
+
+.nav>li>a {
+    padding:0px 15px;
+}
+
+.navbar {
+    min-height: 0px;
+    margin-bottom:0px;
+}
+
+.navbar-brand {
+    height: 0px;  
+    padding: 0px 15px; 
+    float:none;
+}
+
+.label {
+    color: #333;
+    font-size: 100%;
+    font-weight: 400;
+}
+.row{
+    /* margin-top: 10px;
+    margin-right: 10px; 
+    margin-left: 10px;
+    margin-bottom: 10px; */
+    margin:10px;
+}
+.ngx-datatable{
+    margin: 10px;
+}
+
+.ngx-datatable.material .datatable-header .datatable-header-cell { 
+    padding: 0rem 1.2rem;
+    background-color: grey;
+    color: white;
+}
+.draggable {
+    cursor:move;
+}
+.selected-count  {
+    display:none!important;
+}
+.page-count {
+    display: none!important;
+}
+
+.datatable-body-cell{
+    border: 1px solid grey;
+}
+
+.ngx-datatable.material .datatable-body .datatable-body-row .datatable-body-cell{
+    padding: 0rem 1.2rem;
+}
+.input-group-addon:first-child {
+    border-right: 0;
+    width: 160px;
+    text-align: left;
+}
+.button{
+    /* padding-top: 10px; */
+    width:40px;
+    height:40px!important;
+    padding: 0px;
+}
+.smallIcon {
+    width:24px;
+    height:24px!important;
+}
+button span{
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    left: -2px;
+}
+.input-group-addon {
+    padding: 2px 4px;
+}
+
+.btn-success{
+    color: black;
+    background-color: #f5f5f5;
+    border-color: black;
+    width: 250px;
+    padding: 10px;
+    margin: 10px 5px;
+}
+
+.panel {
+    background-color: #f5f5f5;    
+    text-align: center;
+}
+.close {
+    color:white!important;
+}
+
+.bg-warning {
+    color:darkblue;
+}
+.bg-error {
+    color:red;
+}
+.bg-info {
+    color:darkmagenta;
+}
+.bg-confirm {
+    color:darkcyan;
+}
+p {
+    text-align: left;
+}
