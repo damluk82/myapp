@@ -33,8 +33,9 @@ export class AppComponent {
   ngOnInit(){
     this.array = this.data.soucres;
     this.form = new FormGroup({
-      date: new FormControl('', Validators.pattern('[\\w\\-\\s\\/]+'))  //illegal special characters
-      
+      date: new FormControl('', this.dateValidator)  //illegal special characters-url
+      //date: new FormControl('', Validators.pattern('^\d{1,2}\.\d{1,2}\.\d{4}$'))
+      //
       // '^(\d{1,2}).(\d{1,2}).(\d{4})$'
       //date: new FormControl('', Validators.pattern('[\\w\\-\\s\\/]+'))
 //      date: new FormControl('', Validators.pattern('^(\d{1,2}).(\d{1,2}).(\d{4})$'))
@@ -43,6 +44,14 @@ export class AppComponent {
 
   onSubmit(form){
     console.log(form);
+  }
+
+  dateValidator(control){
+  //  if (control.value.trim().length === 10) {
+      const dateRegEx = new RegExp(/^\d{1,2}\.\d{1,2}\.\d{4}$/);
+      return dateRegEx.test(control.value) ? null : {date: true}
+  //  }
+
   }
 
 
