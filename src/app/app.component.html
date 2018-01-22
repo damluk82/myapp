@@ -13,24 +13,17 @@
   </li>
 </ul>
 
-<form [formGroup]=form novalidate ngSubmit="onSubmit(form.value)">
+<form [formGroup]=form (ngSubmit)="onSubmit(form.value)">
   <div class="form-group">
     <label class="center-block">Date:</label>
     <input formControlName="date">
-    <button type="submit">Submit</button>
+    <button [disabled]="!form.valid" type="submit">Submit</button>
   </div>
 </form>
 
-<h2>Hero Detail</h2>
-<h3><i>FormControl in a FormGroup</i></h3>
-<form [formGroup]="heroForm" novalidate>
-  <div class="form-group">
-    <label class="center-block">Name:
-      <input class="form-control" formControlName="name">
-    </label>
-  </div>
-</form>
-
+<div *ngIf="date?.invalid">
+  Name is invalid
+</div>
 
 <ngx-datatable
   class="material"
