@@ -17,6 +17,15 @@ export class AppComponent {
   array:any[];
   tabledata: any[];
   selected = [];
+  selectedValue: string;
+
+  items = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'}
+  ]; 
+
+
 
   columns = [
     {name: 'Name', prop: 'name'},
@@ -45,6 +54,10 @@ export class AppComponent {
   onSubmit(form){
     console.log(form);
   }
+
+
+
+
 
   dateValidator(control){
   //  if (control.value.trim().length === 10) {

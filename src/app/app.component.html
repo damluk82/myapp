@@ -13,6 +13,8 @@
   </li>
 </ul>
 
+
+<div style="display:flex; flex-direction:row">
 <form [formGroup]=form (ngSubmit)="onSubmit(form.value)">
   <div class="form-group">
     <label class="center-block">Date:</label>
@@ -21,7 +23,20 @@
   </div>
 </form>
 
+<form style="margin-left:100px">
+  <mat-form-field>
+    <mat-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+      <mat-option *ngFor="let food of items" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 
+  <p> Selected value: {{selectedValue}} </p>
+</form>
+</div>
+
+<p>You selected: {{selected}}</p>
 
 <ngx-datatable
   class="material"
